@@ -41,9 +41,6 @@ cask "hop-cli" do
       run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/hop"]
     end
   end
-  generate_completions_from_executable "hop",
-    shell_parameter_format: :cobra,
-    shells: [:bash, :zsh, :fish]
 
   # No zap stanza required
 end
